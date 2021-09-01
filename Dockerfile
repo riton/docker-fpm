@@ -5,12 +5,12 @@
 #
 
 # Pull base image.
-FROM ruby
+FROM ruby:bullseye
 
 # Install FPM.
 RUN gem install fpm && \
 apt update && \
-apt install -y rpm rpm-common && \
+apt install -y rpm rpm-common python3.9 python3 python3.9-venv && \
 apt -y clean && \
 apt -y autoclean
 
