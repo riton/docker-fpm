@@ -10,7 +10,7 @@ FROM ruby:bullseye
 # Install FPM.
 RUN gem install fpm && \
 apt update && \
-apt install -y rpm rpm-common python3.9 python3 python3.9-venv && \
+apt install -y rpm rpm-common python3.9 python3 python3.9-venv python3-pkg-resources && \
 apt -y clean && \
 apt -y autoclean
 
